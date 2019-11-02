@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.vscode
+*.log
+*.txt
+.DS_Store
+*.pdf
+*.txt
+*.key
+keys
