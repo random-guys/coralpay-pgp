@@ -22,10 +22,10 @@ export interface ImportKeysOptions {
 }
 
 export interface PgpConfig {
+  debug?: boolean;
   passphrase: string;
+  publicKeyPath: string;
   privateKeyPath: string;
-  publicEncryptionKeyPath: string;
-  debug: boolean;
 }
 
 export interface KeyStoreOptions {

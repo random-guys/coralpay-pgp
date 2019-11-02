@@ -22,10 +22,10 @@ export default class Pgp {
   private keyManager: Keymanager;
 
   constructor(config: PgpConfig) {
-    this.keyManager = new Keymanager(config.debug);
-    this.keyStore = defaultKeyStoreOptions;
-    this.debug = config.debug;
     this.config = config;
+    this.debug = config.debug || false;
+    this.keyStore = defaultKeyStoreOptions;
+    this.keyManager = new Keymanager(this.debug);
   }
 
   /**
@@ -46,9 +46,7 @@ export default class Pgp {
   async loadKeys() {
     if (this.keysLoaded) return;
 
-    const loadedKey = await this.loadKeyFromPath(
-      this.config.publicEncryptionKeyPath
-    );
+    const loadedKey = await this.loadKeyFromPath(this.config.publicKeyPath);
     this.keyStore.encryptionKey = await this.keyManager.importKey(loadedKey);
 
     const privateKey_Armored = await this.loadKeyFromPath(
