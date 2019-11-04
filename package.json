@@ -14,14 +14,13 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "tsc -p ./tsconfig.json && cp -r src/keys dist/",
+    "build": "tsc -p ./tsconfig.json",
     "watch": "tsc -w -p ./tsconfig.json",
     "test": "jest"
   },
   "author": "Raymond Tukpe <rtukpe@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@types/locutus": "^0.0.5",
     "gpg": "0.6.0",
     "locutus": "2.0.11",
     "openpgp": "4.6.0",
@@ -30,6 +29,7 @@
     "shelljs": "0.8.3"
   },
   "devDependencies": {
+    "@types/locutus": "^0.0.5",
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.21",
     "jest": "^23.6.0",
