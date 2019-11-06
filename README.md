@@ -1,6 +1,6 @@
 # CoralPay PGP 🔐
 
-CoralPay Encryption and Decryption Lib based on [oseme-techguy's js lib](https://github.com/oseme-techguy/coralpay-c-connect-node-sdk)
+CoralPay Encryption and Decryption Lib based on [oseme-techguy's js lib](https://github.com/oseme-techguy/coralpay-c-connect-node-sdk) and relies heavily on a [wrapper](https://github.com/drudge/node-gpg) around the GPG cli tool.
 
 # Installation
 
@@ -43,3 +43,11 @@ try {
   console.log(error);
 }
 ```
+
+## Usage with Docker
+
+### Prerequisites
+
+1. Modify `run.sh` to change the paths to your keys. This imports the keys into your gpg keychain in the container.
+
+2. Create a passphrase (called my `passphrase.txt`) file. Practically this may be an envionment variable on your CI that's written to the file, knock yourself out.
