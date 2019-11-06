@@ -19,7 +19,7 @@ export default class KeyManager {
   }
 
   private log = (...args) => {
-    if (this.debug) this.logger(...args);
+    if (this.debug) this.logger('LOGGER ==> ', ...args);
   };
 
   /**
@@ -34,7 +34,7 @@ export default class KeyManager {
         if (importError) {
           if (this.debug) this.log('Error occurred while importing key!\n');
 
-          return reject(new Error(`Error occurred while importing key!`));
+          return reject(importError);
         }
 
         if (this.debug)
