@@ -44,7 +44,10 @@ jobs:
             - node_modules
       - run:
           name: Run tests
-          command: yarn start
+          command: |
+            docker-compose up \
+             --abort-on-container-exit \
+             --exit-code-from app
   deploy:
     working_directory: ~/app
     environment:
