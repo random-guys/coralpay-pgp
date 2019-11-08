@@ -2,3 +2,7 @@ version: "3"
 services:
   app:
     build: "."
+    environment:
+      PASSPHRASE: $CIRCLE_PASSPHRASE
+      PUBLIC_KEY: $CIRCLE_PUBLIC_KEY
+      PRIVATE_KEY: $CIRCLE_PRIVATE_KEY
