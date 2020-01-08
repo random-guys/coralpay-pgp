@@ -51,3 +51,9 @@ try {
 1. Modify `run.sh` to change the paths to your keys. This imports the keys into your gpg keychain in the container.
 
 2. Create a passphrase (called my `passphrase.txt`) file. Practically this may be an envionment variable on your CI that's written to the file, knock yourself out.
+
+## Issues
+
+### Testing
+
+If you have any issues when trying to run unit tests, where the error message is `concatUint8Array: Data must be in the form of a Uint8Array`, see this [github issue](https://github.com/openpgpjs/openpgpjs/issues/821)
