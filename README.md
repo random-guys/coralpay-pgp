@@ -1,6 +1,6 @@
 # CoralPay PGP 🔐
 
-CoralPay Encryption and Decryption Lib based on [oseme-techguy's js lib](https://github.com/oseme-techguy/coralpay-c-connect-node-sdk) and relies heavily on a [wrapper](https://github.com/drudge/node-gpg) around the GPG cli tool.
+CoralPay Encryption and Decryption Lib which is a [wrapper](https://github.com/drudge/node-gpg) around the GPG cli tool.
 
 # Installation
 
